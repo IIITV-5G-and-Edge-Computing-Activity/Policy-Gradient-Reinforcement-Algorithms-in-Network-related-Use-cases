@@ -38,7 +38,7 @@ In modern networks, efficient routing is crucial for minimizing latency, avoidin
 The Q-function, \( Q(s, a) \), is updated using the following formula:
 
 \[
-Q(s, a) \gets Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
+Q(s, a) \gets Q(s, a) + \alpha \left[ r + \gamma \min_{a'} Q(s', a') - Q(s, a) \right]
 \]
 
 Where:
@@ -47,7 +47,7 @@ Where:
 - \( \alpha \) is the learning rate,
 - \( r \) is the reward received after taking action \( a \) in state \( s \),
 - \( \gamma \) is the discount factor,
-- \( \max_{a'} Q(s', a') \) represents the maximum Q-value for the next state \( s' \).
+- \( \min_{a'} Q(s', a') \) represents the minimum Q-value for the next state \( s' \).
 
 4. **Repeat** until the Q-values converge, indicating optimal routing paths.
 
