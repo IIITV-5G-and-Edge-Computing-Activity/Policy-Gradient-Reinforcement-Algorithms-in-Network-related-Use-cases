@@ -1,5 +1,14 @@
 # Q-Learning and Policy Gradient Reinforcement Learning for Network Route Optimization
 
+## Team Members:
+- **Vedulla Sai Vardhan** (202251156)
+- **Vankayala Koutilya** (202251152)
+- **Yallapu Vignesh** (202251161)
+- **Utkarsh Rana** (202251148)
+
+## Mentor:
+- **Dr. Bhupendra Kumar**  
+
 This project applies **Reinforcement Learning (RL)** to the problem of **route optimization in networks**. The goal is to leverage RL algorithms, particularly **Q-Learning** and **Policy Gradient Methods**, to optimize routing decisions in dynamic networks, improving performance metrics like latency, throughput, and congestion.
 
 ## Table of Contents
