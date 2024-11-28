@@ -33,10 +33,22 @@ In modern networks, efficient routing is crucial for minimizing latency, avoidin
 
 1. **Initialize** the Q-table arbitrarily for all states and actions.
 2. **Action Selection**: Use an \(\epsilon\)-greedy policy to balance exploration and exploitation.
-3. **Update** the Q-values using the following update rule:
-    \[
-    Q(s, a) \gets Q(s, a) + \alpha \left[ r + \gamma \min_{a'} Q(s', a') - Q(s, a) \right]
-    \]
+3. **Update** ### Q-function Formula
+
+The Q-function, \( Q(s, a) \), is updated using the following formula:
+
+\[
+Q(s, a) \gets Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
+\]
+
+Where:
+- \( s \) is the current state,
+- \( a \) is the action taken,
+- \( \alpha \) is the learning rate,
+- \( r \) is the reward received after taking action \( a \) in state \( s \),
+- \( \gamma \) is the discount factor,
+- \( \max_{a'} Q(s', a') \) represents the maximum Q-value for the next state \( s' \).
+
 4. **Repeat** until the Q-values converge, indicating optimal routing paths.
 
 ### Policy Gradient Methods (for future expansion):
